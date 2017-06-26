@@ -1,0 +1,1019 @@
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" Title="Default Styles" href="//sdfestaticassets-us-east-1.sciencedirectassets.com/prod/26bda2a14cd988af06abf5ea187fed2fe3377b7e/style.css" type="text/css">
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="robots" content="NOARCHIVE">
+<meta name="robots" content="noodp" />
+<meta name="robots" content="noydir" />
+
+<link rel="canonical" href="http://www.sciencedirect.com/science/article/pii/S089360801730059X">
+
+
+<link rel="shortcut icon" href="http://cdn.els-cdn.com/sd/favSD.ico" type="image/x-icon">
+<title>
+ Evaluating deep learning architectures for Speech Emotion Recognition
+ </title> 
+
+<link type="text/css" rel="StyleSheet" href="http://www.sciencedirect.com/gadgetservices/gadgets/v9/css/gadgets_ext,gadgets,toolbar,SDArticleGadgetOverRide,jquery-ui-1.8.4.custom.css">
+
+
+<link rel="stylesheet" href="http://cdn.els-cdn.com/sd/css/article_1706R1.css" type="text/css">
+<link rel="stylesheet" href="http://cdn.els-cdn.com/sd/css/articleSprite_1706R1.css" type="text/css">
+<link rel="stylesheet" href="http://cdn.els-cdn.com/sd/css/jquery-ui_1706R1.css" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" Title="Default Styles" href="http://cdn.els-cdn.com/sd/css/css_gen_ielt9_1706R1.css" type="text/css">
+<![endif]-->
+
+<script>
+var ab=new Object();
+ab.entitled = true;
+</script>
+<script>(function() {var scriptTag = document.createElement('script'); 
+scriptTag.type = 'text/javascript';scriptTag.async = true;
+scriptTag.src = '//cdn.optimizely.com/js/204774041.js';
+var head = document.getElementsByTagName('head')[0];
+head.parentNode.insertBefore(scriptTag, head);
+})();function optimizelyTimeout() {
+window.optimizely = window.optimizely|| []; 
+if(!window.optimizely.data) {
+window.optimizely.push("timeout"); } }
+setTimeout(optimizelyTimeout, 1000); </script>
+
+<!-- Start: GPT Async -->
+<script type='text/javascript'>
+	
+var gptadslots=[];
+	
+var googletag = googletag || {};
+	
+googletag.cmd = googletag.cmd || [];
+	
+(function(){ var gads = document.createElement('script');
+		
+gads.async = true; gads.type = 'text/javascript';
+		
+var useSSL = 'https:' == document.location.protocol;
+		
+gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+		
+var node = document.getElementsByTagName('script')[0];
+		
+node.parentNode.insertBefore(gads, node);
+	})();
+
+</script>
+
+<script>
+var prs = new Object();prs.rt=function(label,ts){this[label]=(ts||ts==0?ts:new Date().getTime());};
+</script>
+
+
+
+<!--[if lte IE 7]>
+<script src="http://cdn.els-cdn.com/sd/ut/js/json2_1706R1.js.min"></script>
+<![endif]-->
+</head>
+
+
+<script>
+(function() {
+  if (window.BOOMR && window.BOOMR.version) { return; }
+  var dom,doc,where,iframe = document.createElement('iframe'),win = window;
+
+  function boomerangSaveLoadTime(e) {
+    win.BOOMR_onload=(e && e.timeStamp) || new Date().getTime();
+  }
+  if (win.addEventListener) {
+    win.addEventListener("load", boomerangSaveLoadTime, false);
+  } else if (win.attachEvent) {
+    win.attachEvent("onload", boomerangSaveLoadTime);
+  }
+
+  iframe.src = "javascript:false";
+  iframe.title = ""; iframe.role="presentation";
+  (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+  where = document.getElementsByTagName('script')[0];
+  where.parentNode.insertBefore(iframe, where);
+
+  try {
+    doc = iframe.contentWindow.document;
+  } catch(e) {
+    dom = document.domain;
+    iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
+    doc = iframe.contentWindow.document;
+  }
+  doc.open()._l = function() {
+    var js = this.createElement("script");
+    if(dom) this.domain = dom;
+    js.id = "boomr-if-as";
+    js.src = '//c.go-mpulse.net/boomerang/' +
+    '2FBN2-NKMGU-EJKY8-ZANKZ-SUJZF';
+    BOOMR_lstart=new Date().getTime();
+    this.body.appendChild(js);
+  };
+  doc.write('<body onload="document._l();">');
+  doc.close();
+})();
+</script>
+
+
+
+
+<body>
+
+<div class="ua_btn" role="region" aria-label="screen reader compatability"><a role="button" rel="nofollow" href="http://www.sciencedirect.com/science/article/pii/S089360801730059X?np=y">Screen reader users, click here to load entire article</a>This page uses JavaScript to progressively load the article content as a user scrolls.  Screen reader users, click the load entire article button to bypass dynamically loaded article content.</div>
+
+
+
+<script>
+var refLinkURL = "http://www.sciencedirect.com/science/relLink/ajaxReq?_eid=1-s2.0-S089360801730059X";
+var updatedCitedBy = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_updateCitedBy=";
+var refResolvePath = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_pii=S089360801730059X&_refCnt=49&_docType=article";
+
+// these variables handle the reference resolution. Please ignore the naming.
+// the first variable myMap will hold an associative array of links by bibID
+// the second variable myXabsCounts holds the scopus counts.
+var myMap = []; // html of links for references.
+var myXabsCounts = []; // scopus counts
+</script>
+<div id="header-area">
+  
+
+
+<!-- ************* For A/B testing FAST and SOLR Proxy ***************** -->
+
+<!-- *************End for A/B testing FAST and SOLR Proxy *****************-->
+
+
+
+<div id="ieWarningMsg">
+    <span class="infoIcon_ie spErrorIcon">
+        Please note that Internet Explorer version 8.x will not be supported as of January 1, 2016. Please refer to <a href="http://blog.sciencedirect.com/posts/have-you-heard-spread-the-word-about-upgrading-your-browser"> this blog post</a> for more information.
+    </span>
+    <a class="closeBt" title="Close Internet Explorer 7 warning">Close</a>
+</div>
+
+
+
+<div id="header">
+
+<div class="ccs-component">
+    <div class="header" role="banner"><div class="els-header"><noscript></noscript><div class="els-header-sub-nav-container"><div class="els-header-leftside"><div class="els-header-wordmark"><a href="/"><span aria-label="ScienceDirect" class="ccs-icon svg-wordmark-sciencedirect-orange els-main-title"><span class="svg-text">ScienceDirect</span></span></a></div></div><div class="els-header-sub-nav"><ul class="JournalsAndBooks els-header-navigation" role="navigation"><li class="els-header-navigation-section"><a id="ccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/journals">Journals</a></li><li class="els-header-navigation-section"><a id="ccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/bookbshsrw">Books</a></li><li class="els-header-navigation-section"><a class="link-inherit els-header-navigation-item " href="https://www.sciencedirect.com/user/register?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS089360801730059X">Register</a></li></ul><ul class="els-header-icons"><li class="els-header-icons-item els-header-user"><a aria-controls="ccs-profilePopup" aria-expanded="false" id="ccs-profilePopupLink" title="" href="https://www.sciencedirect.com/user/login?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS089360801730059X" class="link-inherit els-header-user-link"><span class="signIn_User"><span id="els-header-user-sign-in" class="els-header-user-sign-in">Sign in</span><span id="els-header-user-sign-in-icon" class="ccs-icon svg-sdfe-arrow-down els-header-user-icon-signin"></span></span></a><div class="SignInOut"><div class="ccs-signin-popup" role="dialog" id="ccs-profilePopup" aria-label="Sign in"><div class="ccs-signin-popup-body-border"><div class="ccs-signin-body ccs-signin-popup-body"><form id="ccs-header-sign-in-form" class="SignInForm ccs-signin-local" action="https://www.sciencedirect.com/user/login/submit" method="POST"><input type="hidden" value="http://www.sciencedirect.com/science/article/pii/S089360801730059X" name="returnURL"/><div><h3>Sign in using your ScienceDirect credentials</h3><div class="ccs-signin-form"><div><label class="ccs-signin-form-left">Username</label><span class="ccs-signin-form-right"><input class="ccs-signin-username" name="userid" id="ccs-signin-username-input" title="Please enter your username here" type="text"/></span></div><div><label class="ccs-signin-form-left">Password</label><span class="ccs-signin-form-right"><input class="ccs-signin-password" name="password" title="Please enter your password here" type="password"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="" name="rememberid" value="Y" title="Checking this option will log you in automatically next time you visit ScienceDirect" type="checkbox" checked=""/><label>Remember me</label></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="ccs-signin-submit" value="Sign in" title="Sign in to ScienceDirect" type="submit"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><a class="link-inherit" rel="nofollow" href="/science?_ob=ReminderURL&amp;_method=display&amp;md5=4a97631c25ac81c09ad2f961106e9da2" target="passwd" title="Click here for help in recovering your ScienceDirect access">Forgotten username or password?</a></span></div></div></div></form><div class="InstitutionalLogin ccs-signin-remote"><h3>Sign in via your institution</h3><ul class="ccs-signin-institution"><li class="ccs-signin-open-athens"><a class="link-inherit" rel="nofollow" href="https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.eduserv.org.uk%2Fopenathens&amp;appReturnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS089360801730059X" title="Log in using OpenAthens">OpenAthens</a></li><li class="ccs-signin-external"><a class="link-inherit" rel="nofollow" href="/science/externallogin" title="Other institution login">Other institution</a></li></ul><div><h3>Recent Institutions</h3><ul class="ccs-signin-institution"></ul></div></div></div></div></div></div></li><li class="Help els-header-icons-item"><a id="ccs-help-link" class="link-inherit els-header-help" href="https://service.elsevier.com/app/home/supporthub/sciencedirect/" title="Help" target="_blank"><span aria-label="Help" class="ccs-icon svg-help"><span class="svg-text">Help</span></span></a></li></ul><div id="mobile-menu-parent"><div class="HamburgerButton" id="hamburger-button"><button id="ccs-mobileHamburgerButton" aria-controls="" aria-expanded="false" aria-label="Menu" class="link"><span class="svg-hamburger-closed"></span></button></div><div aria-label="Mobile menu" class="MobileMenu" id="mobile-menu"><div class="mobile-menu-container" id="mobile-menu-container"><div class="mobilemenu-content"><div><div class="primary-mobile-menu"><ul class="JournalsAndBooks els-header-navigation" role="navigation"><li class="els-header-navigation-section"><a id="mobileccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/journals">Journals</a></li><li class="els-header-navigation-section"><a id="mobileccs-journalsLink" class="link-inherit els-header-navigation-item " href="/science/bookbshsrw">Books</a></li><li class="els-header-navigation-section"><a class="link-inherit els-header-navigation-item " href="https://www.sciencedirect.com/user/register?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS089360801730059X">Register</a></li></ul></div><div class="secondary-mobile-menu"><li class="els-header-icons-item els-header-user"><a href="https://www.sciencedirect.com/user/login?returnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS089360801730059X" aria-controls="mobileccs-profilePopup" aria-expanded="false" id="mobileccs-ProfilePopupLink" class="link-inherit els-header-user-link"><span class="signIn_User"><span id="els-header-user-sign-in" class="els-header-user-sign-in">Sign in</span><span id="els-header-user-sign-in-icon" class="ccs-icon svg-sdfe-arrow-down els-header-user-icon-signin"></span></span></a></li><li class="Help els-header-icons-item"><a id="mobileccs-help-link" class="link-inherit els-header-help" href="https://service.elsevier.com/app/home/supporthub/sciencedirect/" title="Help" target="_blank"><span aria-label="Help" class="ccs-icon svg-help"><span class="svg-text">Help</span></span></a></li></div></div></div></div></div></div><div class="SignInOut"><div class="ccs-signin-popup ccs-mobile-signin-popup" role="dialog" id="mobileccs-profilePopup" aria-label="Sign in"><div class="ccs-signin-popup-body-border"><div class="ccs-signin-body ccs-signin-popup-body"><form id="ccs-header-sign-in-form" class="SignInForm ccs-signin-local" action="https://www.sciencedirect.com/user/login/submit" method="POST"><div class="ccs-sign-in-close"><a href="#" class="ccs-icon svg-delete link-inherit" id="ccs-closeSignInPopup" aria-label="Close sign in popup" aria-controls="mobileccs-profilePopup" role="button" title="Close"><span class="svg-text">close</span></a></div><input type="hidden" value="http://www.sciencedirect.com/science/article/pii/S089360801730059X" name="returnURL"/><div><h3>Sign in using your ScienceDirect credentials</h3><div class="ccs-signin-form"><div><label class="ccs-signin-form-left">Username</label><span class="ccs-signin-form-right"><input class="ccs-signin-username" name="userid" id="mobileccs-signin-username-input" title="Please enter your username here" type="text"/></span></div><div><label class="ccs-signin-form-left">Password</label><span class="ccs-signin-form-right"><input class="ccs-signin-password" name="password" title="Please enter your password here" type="password"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="" name="rememberid" value="Y" title="Checking this option will log you in automatically next time you visit ScienceDirect" type="checkbox" checked=""/><label>Remember me</label></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><input class="ccs-signin-submit" value="Sign in" title="Sign in to ScienceDirect" type="submit"/></span></div><div><label class="ccs-signin-form-left"></label><span class="ccs-signin-form-right"><a class="link-inherit" rel="nofollow" href="/science?_ob=ReminderURL&amp;_method=display&amp;md5=4a97631c25ac81c09ad2f961106e9da2" target="passwd" title="Click here for help in recovering your ScienceDirect access">Forgotten username or password?</a></span></div></div></div></form><div class="InstitutionalLogin ccs-signin-remote"><h3>Sign in via your institution</h3><ul class="ccs-signin-institution"><li class="ccs-signin-open-athens"><a class="link-inherit" rel="nofollow" href="https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.eduserv.org.uk%2Fopenathens&amp;appReturnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS089360801730059X" title="Log in using OpenAthens">OpenAthens</a></li><li class="ccs-signin-external"><a class="link-inherit" rel="nofollow" href="/science/externallogin" title="Other institution login">Other institution</a></li></ul><div><h3>Recent Institutions</h3><ul class="ccs-signin-institution"></ul></div></div></div></div></div></div></div></div></div></div> 
+    
+</div> 
+
+
+</div><!--header-->
+
+
+
+
+
+
+
+
+
+</div><!--header-area-->
+        <!-- PDFKING/PDFCITE -->
+        <div id="pdfModalWindow" class="pdfModalWindow" style="display:none;" onClick="pdfCite.closePopup();"></div>
+        <div id="suggestedPdfList" style="display:none;">
+         
+            <div id="suggestedPdfList" style="display: block;" class="newStyles">
+  <div id="modalBoxDisplay" class="nojs" tabindex="0" role="dialog" aria-labelledby="hdSDSuggestions">
+    <div class="pdfModalWindowMsgBox" id="pdfModalWindowMsgBox" >
+	  <div class = "modal" style="-webkit-box-shadow: none; box-shadow: none; margin-left: 12px; margin-right: 12px;">
+        <div id="displayPdfKing" style="display:block;">
+           <form method="get" name="Tag" action="/science/suggestedArt/export" style="padding:0px; margin:0px;" target="">
+            <input type="hidden" name="pdfDownload" value="download">
+            
+                <input type="hidden" name="PDF_DDM_MAX" value=25>
+             
+            <input type="hidden" name="_retainOrder" value="Y">
+            <input class='zone' name='zone' type='hidden' value='DDM'/>
+            <div class="header" style="height: auto; padding-bottom: 20px; background: rgb(255, 255, 255);">
+            <div class="pdfKingHeading" style="display:block;">Other users also viewed these articles
+            <a class="newCloseBtn" id="pdfKingcloseBtn" href = "#" title = "Close Article Suggestions" alt="Close Article Suggestions"><img src="http://cdn.els-cdn.com/sd/sci_dir/closeButton.png"></a></div></div>
+            <div id="SuggestedArtList" style="min-height: 100px;">
+                <div class="toolBar">
+                <ul class = "group"> 
+                    
+                    <li class="pdfDownloader" style="display: inline-block; padding: 4px 4px 0px 4px; border: 1px solid rgb(201, 201, 201);">
+                        <input value="Download All PDFs" name="pdfDownloadButton" class="listAction iconBg" type="submit" id="multiPdfIcon" aria-describedby="downloadAllPdfAx" style="width:auto; font-size: 14px; color: rgb(49, 108, 157);">
+                        <span class="arrow"></span>
+                        <span id="downloadAllPdfAx" class="hidden" >Opens document download manager</span>
+                    </li>
+                    
+                </ul>
+                </div>
+                
+                <div id="pdfkingContent" style="display:none;">
+                    <div class="popcontent"></div> 
+                    <div id="relatedArtList" data-entitled="Y"></div>
+                </div>
+                
+            </div>
+                
+                <div class="newFooter">
+                <a class = "do-not-show" href="#" onClick="pdfCite.setOptOutFlag('http://www.sciencedirect.com/science/suggestedArt/optOut');" style="cursor: pointer; float: none; line-height: normal;">Do not show again</a>
+                </div>
+          </form>
+        </div>
+        <div id="pdfKingMessage" style="display:none;">
+          <div class="pdfKingHeading" style="display:block;">
+            <span class="downloadMsg">Downloading zip file containing 3 articles...</span>
+            <a class="newCloseBtn" onClick="pdfCite.closePopup();" href = "#" title = "Close Article Suggestions" alt="Close Article Suggestions"><img src="http://cdn.els-cdn.com/sd/sci_dir/closeButton.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        </div>
+        <!-- PDFKING/PDFCITE End -->
+<div id="page-area">
+    
+     
+     
+    <div id="articleToolbar" class="clearfix quicksearch prd_sci_dir">
+        <div id="articleNav">
+  <ul aria-label="Article options" role="navigation" class="clearfix">
+    <!-- return to gateway -->
+     
+
+
+
+
+
+
+<li>
+  <div class="icon_pdf toolbar">
+    <div class="largeIcon"></div>
+    <a id="pdfLink" rel="nofollow"   href="http://www.sciencedirect.com/science/article/pii/S089360801730059X/pdfft?md5=35ee95cb731c8f4659ee6ded1b0e1912&pid=1-s2.0-S089360801730059X-main.pdf" queryStr="?_origin=article&_zone=toolbar" target="newPdfWin"   pdfurl="http://www.sciencedirect.com/science/article/pii/S089360801730059X/pdfft?md5=35ee95cb731c8f4659ee6ded1b0e1912&pid=1-s2.0-S089360801730059X-main.pdf" queryStr="?_origin=article&_zone=toolbar" suggestedArtURL="http://www.sciencedirect.com/science/suggestedArt/citeList/pii/S089360801730059X/eid/1-s2.0-S089360801730059X/serial" class="S_C_pdfLink big pdf ext_sdlink cLink" style="cursor:pointer" title="Download PDF" >Download PDF
+    <span id="pdfExplanation" class="offscreen">Opens in a new window.  Article suggestions will be shown in a dialog on return to ScienceDirect.</span>
+    </a>
+  </div>
+</li>
+ 
+ 
+
+
+
+
+
+
+
+<li class="exportPopupListitem">
+<div class="pulldown">
+    <div class="exportDivision" title="Export citations">
+    <div class="exportIconText">
+    <div class="icon_exportarticlesci_dir initialImage export_icon" tabindex="0"> &nbsp; </div>
+    <input id="icon_exportarticle" value="Export" name="export" class="listAction export export_general" tabindex="-1" type="button">
+     <span class="downSM_sci_dir exportArrow"></span>
+    </div>
+    <input class='zone' name='zone' type='hidden' value='exportDropDown'/>
+    </div>
+    <div class="menu export_popup hidden" id="export_popup">
+    <div  class='warningIcon' title="Warning Icon" alt="Warning Icon"></div>
+    <form name="exportCite" method=post action=/science?_ob=DownloadURL&_method=finish&_eidkey=1-s2.0-S089360801730059X&count=1&_docType=FLA&md5=49a5ef57253e670d757afaa2db446c4e target="">
+    <input class='zone' name='zone' type='hidden' value='exportDropDown'/>
+            <script language="javascript" type="text/javascript">
+<!--
+
+function checkExportFormat(limit) {
+
+    var msg = "";
+
+    for (i=0;i<document.exportCite.elements.length;i++) {
+        if (document.exportCite.elements[i].value == "REFWX") {
+            if (document.exportCite.elements[i].checked) {
+                document.exportCite.setAttribute('target',"RefWorksMain");
+                if (checkLimit()) {
+                    if (limit) {
+                        msg = "It is possible that some users may experience problems when downloading large numbers of citations. If this happens please contact RefWorks support at your regionally hosted site or e-mail support@refworks.com to assist you further.\n\n";
+                    }
+                    msg += "Exporting to RefWorks may take some time, please wait....";
+                    alert(msg);
+                }
+            }
+            else {
+                document.exportCite.setAttribute('target',"");
+            }
+            break;
+        }
+    }
+    return true;
+}
+
+function determineCount(numStr) {
+    var count=1;
+
+    if(numStr.indexOf("-")) {
+        var rangeStr = numStr.split("-");
+
+        if(rangeStr.length == 2) {
+            var highNum = parseInt(rangeStr[1]);
+            var lowNum = parseInt(rangeStr[0]);
+
+            if(highNum >= lowNum) { count = (highNum - lowNum) + 1; }
+        }
+    }
+    return count;
+}
+
+function checkLimit(){
+
+    var selectNum = "";
+    var useSelected = false;
+    var allNum = 0;
+    var count = 0;
+    var rdoc = 0;
+
+    for (i=0;i<document.exportCite.elements.length;i++) {
+        if (document.exportCite.elements[i].name == "count") {
+            allNum = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].name == "NUMBER_LIST") {
+            selectNum = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].name == "_rdoc") {
+            rdoc = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].value == "selected") {
+            if (document.exportCite.elements[i].checked) {
+                useSelected = true;
+            }
+        }
+    }
+
+    if (useSelected) {
+        selectNum = selectNum.replace(/ /g,"");
+        if(selectNum.indexOf(",")) {
+            var commaList = selectNum.split(",");
+            for(i=0; i < commaList.length; i++) {
+                count += determineCount(commaList[i]);
+            }
+        }
+        else {
+            count += determineCount(selectNum);
+        }
+    }
+    else { 
+        if (rdoc > 0) {
+            count = 1;
+        }
+        else {
+            count = allNum;
+        }
+    }
+
+    if(count > 50) { return true; }
+  
+    return false;
+}
+
+//-->
+</script>
+
+    <div class="exportInfo">
+        <div class="chkboxCount"></div>
+        <div class="exportHelp">
+            <a target="sdhelp" href="/science?_ob=HelpURL&_file=art_export.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=art_export.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a>
+        </div>
+    </div>
+
+    <div class="expContainer">
+      <ul class="Export_Popup" width="100%">
+        <li class="subHeading"><h3> Direct export </h3></li>
+        <li class="direct_export">
+         
+            <div>
+              <div class="btn_export directExport">
+                <div class="icon_Mendeley" title="Save to Mendeley">&nbsp;</div>
+                <input id="directExport" type="button" value="Save to Mendeley" name="Save to Mendeley" alt="Save to Mendeley" class="mendeleyBT button"/>
+              </div>
+            </div>
+        
+        
+            <div class="btnLine">
+              <div class="btn_export refworks">
+                <div class="icon_Refworks" title="Save to RefWorks">&nbsp;</div>
+                <input id="REFWX" type="button" value="Save to RefWorks" name="Save to RefWorks" alt="Save to RefWorks" class="button refworks"/>
+              </div> 
+            </div>
+            <div class="clear"> </div>
+        
+        </li>
+        <li class="subHeading big"> <h3>Export file</h3></li>
+        <li class="export_radio RIS"><input type="radio" id="RIS" checked name="citation-type" value="RIS"  class="artRadio expRadio RIS">&nbsp;<label for="RIS">RIS&nbsp;(for EndNote, Reference Manager, ProCite)</label>
+        </li>
+        <li class="export_radio"><input type="radio" id="BIBTEX" name="citation-type" value="BIBTEX"  class="artRadio expRadio BIBTEX">&nbsp;<label for="BIBTEX">BibTeX</label>
+        </li>
+        <li class="export_radio"><input type="radio" id="ASCII" name="citation-type" value="ASCII"  class="artRadio expRadio ASCII">&nbsp;<label for="ASCII">Text</label>
+        </li>
+        <li class="export_radio hidden"><input type="radio" id="REFWX" name="citation-type" value="REFWX"  class="artRadio expRadio REFWX">&nbsp;<label for="REFWX">RefWorks Direct Export</label>
+        </li>
+        <li class="subHeading big"><h3>Content</h3></li>
+        <li class="expCitab export_radio"><input type="radio" id="cite" class="cite artRadio expRadio" name="format" value="cite" >&nbsp;<label class="cit" for="cite"> Citation Only </label>
+        </li>
+        <li class="expCitab export_radio citab"><input type="radio" id="cite-abs" class="cite-abs artRadio expRadio" name="format" value="cite-abs" checked>&nbsp;<label class="cab" for="cite-abs"> Citation and Abstract </label>
+        </li>
+        <li class="export_submit">
+            <div class="downBtn export_downBtn">
+               <input type="submit" value="Export" name="export" alt="Export" class="button export_button" id="export_button"/>
+            </div> 
+        </li>
+      </ul>
+
+    </div>
+
+
+        
+        
+            
+         
+
+    </form>
+    </div> 
+</div>    
+</li>
+  
+
+
+
+</ul>
+</div>
+
+<div class="sdSearch" aria-label="Quick search" role="search">
+    <fieldset>
+        <div class="left">
+            <form id="quickSearch" name="qkSrch" method="get" target="_top" action="/science">
+            <input type="hidden" name="_ob" value="QuickSearchURL">
+            <input type="hidden" name="_method" value="submitForm">
+            <input type="hidden" name="_acct" value="C000072452">
+            <input type="hidden" name="searchtype" value="a">
+            <input type="hidden" name="_origin" value="article">
+            <input type="hidden" name="_zone" value="qSearch">
+            <input type="hidden" name="md5" value="08435916f7006999dca7ff9c4e31b546">
+            
+            <input  id="quickSearch" type="text" name="qs_all" placeholder="Search ScienceDirect" value="" size="30" maxlength="450" title="Perform a quick search on ScienceDirect"><input type="submit" class="submit" value="" title="Submit quick search"/>
+            
+            <a class="advanced S_C_advanced" href="http://www.sciencedirect.com/science/search" >Advanced search</a>
+            </form>
+        </div>
+    </fieldset>
+</div>
+<div class="clear"></div>
+<div id="erToolbar"></div>
+
+
+<div style="color : #FF0000; font-weight : bold;border:0px solid red;">
+  
+  
+  
+  
+</div>
+
+
+
+
+
+    </div>
+    <div id="articleToolbarDummy"></div>
+  <div style="clear:both;"></div>
+  
+  <div id="leftPane" class="column" aria-label="table of contents" role="navigation">
+    <div id="leftPaneInner">
+        <div>
+        <div id="leftButton">
+            <ul>
+                <li class="tocbutton">
+                    <a class="outline-toggle" title="Open to view article outline"  alt="Open to view article outline" href="#" aria-expanded="false">
+                        <span class="icon outline_big"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="outlineContainer">
+            <a class="closeBt" title="Close">&nbsp;</a>
+            <div id="outline" class="outline">
+              <script type="text/javascript">
+              document.write("<div class='outlineMsg'>Article outline is loading...</div>");
+              </script>
+              <noscript>
+              <div class="infoMsg">
+              <div style="float: left; width: 20px; "><img border="0" src="http://cdn.els-cdn.com/sd/alertIcon.gif" valign="top" alt="Alert message"></div>
+              <div style="padding-left:25px;">JavaScript is disabled on your browser. <br><div style="padding-top:10px;">
+              Please enable JavaScript to use all the features on this page.</div></div>
+              </div>
+              </noscript>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div id="centerPane" class="column">
+    <div class="topBorder"></div>
+    <div id="centerContent" class="centerContent">
+    <div id="centerInner" class="centerInner svBigBox" role="main">
+        
+      
+      <noscript>
+      <div class="msgBox" style="margin-top:10px;">
+          <span class="errMsg">
+            <div>JavaScript is disabled on your browser.  Please enable JavaScript to use all the features on this page. This page uses JavaScript to progressively load the article content as a user scrolls. Click the View full text link to bypass dynamically loaded article content. <a rel="nofollow" href="http://www.sciencedirect.com/science/article/pii/S089360801730059X?np=y">View full text</a></div>
+         </span>
+      </div><br/>
+      </noscript>
+      <div class="head headTemplate page_fragment_ind">
+
+  
+<div class="publisherLogo">
+  <span class="spElsevierPubIcon"></span>
+</div>
+
+
+  
+    <?xml version="1.0" encoding="UTF-8"?><div xmlns:bk="http://www.elsevier.com/xml/bk/dtd" class="publicationHead"><div class="title"><a title="Go to Neural Networks on ScienceDirect" href="/science/journal/08936080" queryStr="?zone=centerPane" class="cLink"><span>Neural Networks</span></a></div><p class="volIssue"><a class="S_C_volIss" title="Go to table of contents for this volume/issue" href="/science/journal/08936080/92/supp/C">Volume 92</a>, August 2017, Pages 60–68</p><p class="specIssueTitle">Advances in Cognitive Engineering Using Neural Networks</p><p class="titleEditors">Edited By Minho Lee, Steven Bressler and Robert Kozma</p></div>
+  
+    <div class="publicationCover cover2">
+    
+      
+    <a queryStr="?zone=publicationLogo" class="cLink" href="/science/journal/08936080/92/supp/C">
+      
+    
+    <img alt="Cover image" src="http://ars.els-cdn.com/content/image/1-s2.0-S0893608017X00063-cov150h.gif" class="toprightlogo" />
+    <noscript><img alt="Cover image" src="http://ars.els-cdn.com/content/image/1-s2.0-S0893608017X00063-cov150h.gif" class="toprightlogo" /></noscript>
+    </a>
+    
+  </div>
+
+
+</div>
+
+      <div id="frag_1" class="page_fragment auth_frag" data-first="true" data-fid="1"><div id="do000005" class="publicationType"><span id="">2017 Special Issue</span></div><div class="module_topic_paths"></div><h1 class="svTitle" id="ti000005">Evaluating deep learning architectures for Speech Emotion Recognition</h1><ul class="authorGroup noCollab svAuthor"><li><a href="#" class="authorName svAuthor" data-orcid="0000-0002-1840-7605" id="authname_N646ee3a0N4a2e342c" data-t="a" data-fn="Haytham M." data-ln="Fayek" data-pos="1" data-tb="">Haytham M. Fayek</a><a title="Affiliation: a" href="#af000005" class="intra_ref auth_aff" id="baf000005"><sup>a</sup></a><sup>, </sup><a title="Corresponding author contact information" href="#cor000005" id="bcor000005" class="intra_ref auth_corr"></a><sup>, </sup><a href="mailto:haytham.fayek@ieee.org" class="auth_mail" title="E-mail author"></a>, </li><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N646ee3a0N4a299e24" data-t="a" data-fn="Margaret" data-ln="Lech" data-pos="2" data-tb="">Margaret Lech</a><a title="Affiliation: a" href="#af000005" class="intra_ref auth_aff" id="baf000005"><sup>a</sup></a><sup>, </sup><a href="mailto:margaret.lech@rmit.edu.au" class="auth_mail" title="E-mail author"></a>, </li><li><a href="#" class="authorName svAuthor" data-orcid="0000-0001-7464-857X" id="authname_N646ee3a0N4a299f14" data-t="a" data-fn="Lawrence" data-ln="Cavedon" data-pos="3" data-tb="">Lawrence Cavedon</a><a title="Affiliation: b" href="#af000010" class="intra_ref auth_aff" id="baf000010"><sup>b</sup></a><sup>, </sup><a href="mailto:lawrence.cavedon@rmit.edu.au" class="auth_mail" title="E-mail author"></a></li></ul><!--VALIDHTML--><ul class="affiliation authAffil"><li id="af000005"><sup>a</sup> <span id="">School of Engineering, RMIT University, Melbourne VIC 3001, Australia</span></li><li id="af000010"><sup>b</sup> <span id="">School of Science, RMIT University, Melbourne VIC 3001, Australia</span></li></ul><!--VALIDHTML--><!--VALIDHTML--><dl class="articleDates"><dd>Available online 21 March 2017</dd></dl><!--VALIDHTML--><div class="moreInformation"></div><div id="showMoreButtons"></div><div id="ppvPlaceHolder" class="hidden"></div><!--VALIDHTML--><dl class="extLinks"><dd class="doiLink"></dd><dd class="rightsLink"></dd></dl><div class="articleOAlabelForced"></div><div id="refersToAndreferredToBy"><dl id="referredToBy" class="documentThread"><!--Referred To By--></dl></div><!--FRAGMENTEND--><div class="page_fragment_ind auth_frag" data-id="frag_2"></div></div><div id="frag_2" class="page_fragment" data-fid="2"><script>prs.rt("abs_1st_beg");</script><!--VALIDHTML--><hr id="abs_authora0000051" class="artHeader"><div class="abstract svAbstract " data-etype="ab"><h2 class="secHeading" id="authora0000051">Abstract</h2><p id="sp000045">Speech Emotion Recognition (SER) can be regarded as a static or dynamic classification problem, which makes SER an excellent test bed for investigating and comparing various deep learning architectures. We describe a frame-based formulation to SER that relies on minimal speech processing and end-to-end deep learning to model intra-utterance dynamics. We use the proposed SER system to empirically explore feed-forward and recurrent neural network architectures and their variants. Experiments conducted illuminate the advantages and limitations of these architectures in paralinguistic speech recognition and emotion recognition in particular. As a result of our exploration, we report state-of-the-art results on the IEMOCAP database for speaker-independent SER and present quantitative and qualitative assessments of the models&rsquo; performances.</p></div><!--VALIDHTML--><h2 id="kwd_1" class="svKeywords">Keywords</h2><ul class="keyword" id="ks000005"><li id="k000005" class="svKeywords"><span id="">Affective computing</span>; </li><li id="k000010" class="svKeywords"><span id="">Deep learning</span>; </li><li id="k000015" class="svKeywords"><span id="">Emotion recognition</span>; </li><li id="k000020" class="svKeywords"><span id="">Neural networks</span>; </li><li id="k000025" class="svKeywords"><span id="">Speech recognition</span></li></ul><!--VALIDHTML--><div id="embeddedPDF" style="display:none"></div><script>prs.rt("abs_end");</script><div id="SD_BA1P" class="sgfNoTitleBar sgfNoGadgetBorder svDoNotLink"></div><!--VALIDHTML--><hr class="artHeader"><h2 class="svArticle" id="s000005">1. Introduction</h2><p class="svArticle section clear" id="p000005">In recent years, deep learning in neural networks has achieved tremendous success in various domains that led to multiple deep learning architectures emerging as effective models across numerous tasks. Feed-forward architectures such as Deep Neural Networks (DNNs) and Convolutional Neural Networks (ConvNets) have been particularly successful in image and video processing as well as speech recognition, while recurrent architectures such as Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) RNNs have been effective in speech recognition and natural language processing (<a href="#br000120" id="bbr000120" class="intra_ref">LeCun et al., 2015</a>&#xA0;; &#xA0;<a href="#br000175" id="bbr000175" class="intra_ref">Schmidhuber, 2015</a>). These architectures process and model information in different ways and have their own advantages and limitations. For instance, ConvNets are able to deal with high-dimensional inputs and learn features that are invariant to small variations and distortions (<span id="bbr000115"><a href="#br000115" id="ancbbr000115" class="intra_ref">Krizhevsky, Sutskever, &amp; Hinton, 2012</a></span>), whereas LSTM-RNNs are able to deal with variable length inputs and model sequential data with long range context (<span id="bbr000075"><a href="#br000075" id="ancbbr000075" class="intra_ref">Graves, 2008</a></span>).</p><!--VALIDHTML--><p class="svArticle section clear" id="p000010">In this paper, we investigate the application of end-to-end deep learning to Speech Emotion Recognition (SER) and critically explore how each of these architectures can be employed in this task. SER can be regarded as a static or dynamic classification problem, which has motivated two popular formulations in the literature to the task (<span id="bbr000235"><a href="#br000235" id="ancbbr000235" class="intra_ref">Ververidis &amp; Kotropoulos, 2006</a></span>): <em>turn-based processing</em> (also known as static modeling), which aims to recognize emotions from a complete utterance; or <em>frame-based processing</em> (also known as dynamic modeling), which aims to recognize emotions at the frame level. In either formulation, SER can be employed in stand-alone applications; e.g. emotion monitoring, or integrated into other systems for emotional awareness; e.g. integrating SER into Automatic Speech Recognition (ASR) to improve its capability in dealing with emotional speech ( <a href="#br000025" id="bbr000025" class="intra_ref">Cowie et al., 2001</a>; <a href="#br000055" id="bbr000055" class="intra_ref">Fayek et al., 2016b</a>&#xA0;; &#xA0;<a href="#br000060" id="bbr000060" class="intra_ref">Fernandez, 2004</a>). Frame-based processing is more robust since it does not rely on segmenting the input speech into utterances and can model intra-utterance emotion dynamics ( <a href="#br000010" id="bbr000010" class="intra_ref">Arias et al., 2013</a>&#xA0;; &#xA0;<a href="#br000045" id="bbr000045" class="intra_ref">Fayek et al., 2015</a>). However, empirical comparisons between frame-based processing and turn-based processing in prior work have demonstrated the superiority of the latter ( <a href="#br000190" id="bbr000190" class="intra_ref">Schuller, Vlasenko et al., 2009</a>&#xA0;; &#xA0;<a href="#br000240" id="bbr000240" class="intra_ref">Vlasenko et al., 2007</a>).</p><!--VALIDHTML--><p class="svArticle section clear" id="p000015">Whether performing turn-based processing or frame-based processing, most of the research effort in the last decade has been devoted to selecting an optimal set of features (<span id="bbr000185"><a href="#br000185" id="ancbbr000185" class="intra_ref">Schuller et&nbsp;al., 2010</a></span>). Despite the effort, little success has been achieved in realizing such a set of features that performs consistently over different conditions and multiple data sets (<span id="bbr000040"><a href="#br000040" id="ancbbr000040" class="intra_ref">Eyben, Scherer et&nbsp;al., 2015</a></span>). Thus, researchers have resorted to brute-force high-dimensional features sets that comprise many acoustic parameters in an attempt to capture all variances (<span id="bbr000215"><a href="#br000215" id="ancbbr000215" class="intra_ref">Tahon &amp; Devillers, 2016</a></span>). Such high-dimensional feature sets complicate the learning process in most machine learning algorithms, increase the likelihood of overfitting and hinder generalization. Moreover, the computation of many acoustic parameters is computationally expensive and may be difficult to apply on a large scale or with limited resources (<span id="bbr000035"><a href="#br000035" id="ancbbr000035" class="intra_ref">Eyben, Huber, Marchi, Schuller, &amp; Schuller, 2015</a></span>). Therefore, it is highly pertinent to investigate the application of deep learning to SER to alleviate the problem of feature engineering and selection and achieve an SER with a simple pipeline and low latency. Moreover, SER is an excellent test bed for exploring various deep learning architectures since the task itself can be formulated in multiple ways.</p><!--VALIDHTML--><p class="svArticle section clear" id="p000020">Deep learning has been applied to SER in prior work, as discussed in Section&nbsp; <span id="bs000010"><a href="#s000010" id="ancbs000010" class="intra_ref">2</a></span>. However, with different data subsets and under various experiment conditions involved in prior studies, it is difficult to directly compare various deep learning models. To the best of our knowledge, our work provides the first empirical exploration of various deep learning formulations and architectures applied to SER. As a result, we report state-of-the-art results on the popular Interactive Emotional Dyadic Motion Capture (IEMOCAP) database (<span id="bbr000020"><a href="#br000020" id="ancbbr000020" class="intra_ref">Busso et&nbsp;al., 2008</a></span>) for speaker-independent SER.</p><!--VALIDHTML--><p class="svArticle section clear" id="p000025">The remainder of this paper is divided into seven sections. In the following section, related work is reviewed, highlighting recent advances. In Section&nbsp; <span id="bs000015"><a href="#s000015" id="ancbs000015" class="intra_ref">3</a></span>, a review of deep learning is presented focusing on the architectures and methods used in this paper. In Section&nbsp; <span id="bs000035"><a href="#s000035" id="ancbs000035" class="intra_ref">4</a></span>, the proposed SER system is explained. In Section&nbsp; <span id="bs000040"><a href="#s000040" id="ancbs000040" class="intra_ref">5</a></span>, the experimental setup is described, depicting the data, its preprocessing, the computational setup and the training recipe. Experiments performed and their results are presented in Section&nbsp; <span id="bs000060"><a href="#s000060" id="ancbs000060" class="intra_ref">6</a></span> and discussed in Section&nbsp; <span id="bs000075"><a href="#s000075" id="ancbs000075" class="intra_ref">7</a></span>. Finally, the paper is concluded in Section&nbsp; <span id="bs000080"><a href="#s000080" id="ancbs000080" class="intra_ref">8</a></span>.</p><!--VALIDHTML--><h2 class="svArticle" id="s000010">2. Related work</h2><p class="svArticle section clear" id="p000030">Work on SER prior to 2011 is well reviewed in the literature (<a href="#br000015" id="bbr000015" class="intra_ref">Ayadi et al., 2011</a>; <a href="#br000155" id="bbr000155" class="intra_ref">Petta et al., 2011</a>&#xA0;; &#xA0;<a href="#br000235" id="bbr000235" class="intra_ref">Ververidis and Kotropoulos, 2006</a>). Since DNNs displaced Gaussian Mixture Models (GMMs) for acoustic modeling in ASR (<a href="#br000095" id="bbr000095" class="intra_ref">Hinton et al., 2012</a>&#xA0;; &#xA0;<a href="#br000150" id="bbr000150" class="intra_ref">Mohamed et al., 2012</a>), researchers have attempted to employ DNNs for other speech applications as well, and specifically for SER. <span id="bbr000210"><a href="#br000210" id="ancbbr000210" class="intra_ref">Stuhlsatz et&nbsp;al. (2011)</a></span> proposed a DNN Generalized Discriminant Analysis to deal with high-dimensional feature sets in SER, demonstrating better performance than Support Vector Machines (SVM) on the same set of features. In <span id="bbr000135"><a href="#br000135" id="ancbbr000135" class="intra_ref">Li et&nbsp;al. (2013)</a></span> a hybrid DNN&mdash;Hidden Markov Model (HMM) trained on Mel-Frequency Cepstral Coefficients (MFCCs) was proposed for SER and compared to a GMM&mdash;HMM indicating improved results. <span id="bbr000085"><a href="#br000085" id="ancbbr000085" class="intra_ref">Han, Yu, and Tashev (2014)</a></span> used a DNN to extract features from speech segments, which were then used to construct utterance-level SER features that were fed into an Extreme Learning Machine (ELM) for utterance-level classification outperforming other techniques. In <span id="bbr000050"><a href="#br000050" id="ancbbr000050" class="intra_ref">Fayek, Lech, and Cavedon (2016a)</a></span>, a DNN was used to learn a mapping from Fourier-transform based filter banks to emotion classes using soft labels generated from multiple annotators to model the subjectiveness in emotion recognition which yielded improved performance compared to ground truth labels obtained by majority voting between the same annotators.</p><!--VALIDHTML--><p class="svArticle section clear" id="p000035">More recently, alternative neural network architectures for SER were also investigated. <span id="bbr000140"><a href="#br000140" id="ancbbr000140" class="intra_ref">Mao, Dong, Huang, and Zhan (2014)</a></span> used a ConvNet in a two-stage SER scheme that involves learning local invariant features using a sparse auto-encoder from speech spectrograms, processed using Principal Component Analysis (PCA) followed by salient discriminative feature analysis to extract discriminative features demonstrating competitive results. <span id="bbr000225"><a href="#br000225" id="ancbbr000225" class="intra_ref">Tian, Moore, and Lai (2015)</a></span> compared knowledge-inspired disfluency and non-verbal vocalization features in emotional speech against a feature set comprising acoustic parameters aggregated using statistical functionals, by using LSTM-RNNs as well as SVM, where the former was shown to yield better results given enough data.</p><!--VALIDHTML--><p class="svArticle section clear" id="p000040">This study differs from prior studies in several ways. We focus on a frame-based formulation for SER, aiming to achieve a system with a simple pipeline and low latency by modeling intra-utterance emotion dynamics. Moreover, most previous studies relied on some form of high-level features, while in this paper we strive for minimal speech processing and rely on deep learning to automate the process of feature extraction. Furthermore, we use uniform data subsets and experiment conditions promoting comparisons across various deep learning models, which has not been investigated in previous studies.</p><!--VALIDHTML--><h2 class="svArticle" id="s000015">3. Deep learning: An overview</h2><p class="svArticle section clear" id="p000045">Deep learning in neural networks is the approach of composing networks into multiple layers of processing with the aim of learning multiple levels of abstraction (<a href="#br000070" id="bbr000070" class="intra_ref">Goodfellow et al., 2016</a>&#xA0;; &#xA0;<a href="#br000120" id="bbr000120" class="intra_ref">LeCun et al., 2015</a>). In doing so, the network can adaptively learn low-level features from raw data and higher-level features from low-level ones in a hierarchical manner, nullifying the over-dependence of shallow networks on feature engineering. The remainder of this section reviews the architectures, learning procedures and regularization methods used in this paper.</p><!--VALIDHTML--><div class="page_fragment_ind" data-id="frag_3"></div><script>prs.rt("abs_1st_end");</script></div>
+
+               
+
+       
+   
+        
+    </div>
+    <div id="footer-area-dummy"></div>
+	
+    </div>
+ </div>
+ <div id="rightPane" class="column" aria-label="Related content" role="complementary">
+  <div id="rightOuter" class="rightOuter">
+    <div id="rightInner" class="rightInner">
+       <div class="innerPadding">
+
+    <div id="SD_BIB" class="hidden entry separator appBox sgfNoTitleBar sgfNoGadgetBorder"></div>
+ 
+
+    
+    
+        <div id="recommend_related_articles" class="entry separator related closed">
+            
+                <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Recommended articles</a></h2>
+             
+             <ol id="relArtList"><li class="note"><p>No articles found.</p></li></ol>
+        </div>
+    
+    
+    
+        <div id="cited_by_articles" class="entry separator related closed">
+            <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Citing articles (<span id="hitcount">0</span>)</a></h2>
+            <ol id="citedByList"><li class="note"><p>This article has not been cited.</p></li></ol> 
+        </div>
+    
+    
+    
+        <div id="SD_CRA" class="hidden entry separator appBox sgfNoTitleBar sgfNoGadgetBorder"></div>  
+    
+    
+        
+            <div id="related_book_content" class="entry separator related closed">
+                <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Related book content</a></h2>
+                <ol id="relBkList"><li class="note" style="margin-left:15px;"><p>No articles found.</p></li></ol>
+            </div>
+        
+     
+     
+
+
+
+    
+        <div class="appContainerDummy"></div>
+        <div class="appContainer js_application_content">
+            <ul class="hidden" id="dataRepHolder"></ul>
+            
+                <div id="SD_AT1P" class="boxLink sgfNoTitleBar sgfNoGadgetBorder"></div>
+            
+
+            
+                <div id="SD_FTA1" class="boxLink sgfHorToolbar sgfShowMyApps sgfShowMoreLessApps"></div>
+            
+        </div>
+    
+
+
+</div>
+
+<div class="js_workspace_content popup" aria-live="polite" role="region" aria-label="Overlay" aria-describedby="skuip-3">
+    <a aria-label="close overlay" title="close overlay" alt="close overlay" href="#" id="buttonClose" role="button" class="closeBt">&nbsp;</a>
+    <div class="scrollArea"><div id="workSpaceView"></div></div>
+</div>
+
+    </div><!--rightInner-->
+  </div><!--rightOuter-->
+ </div><!--rightPane-->
+</div><!--page-area-->
+
+        <div class="ccs-component" style="position:absolute;z-index:3;width:100%   ">
+            <div class="Footer" role="contentinfo"><div class="els-footer"><div class="els-footer-body"><a class="els-footer-elsevier" href="http://www.elsevier.com/" rel="nofollow" target="_blank"><span class="ccs-icon svg-wordmark-elsevier" aria-label="Elsevier"><span class="svg-text">Elsevier</span></span></a><div class="els-footer-content"><div class="els-footer-links"><a class="link-inherit" href="http://www.elsevier.com/solutions/sciencedirect" rel="nofollow" target="_blank">About ScienceDirect</a><wbr/><a class="link-inherit" href="/science/activateaccess" rel="nofollow" target="_blank">Remote access</a><wbr/><a class="link-inherit" href="/science?_ob=ShoppingCartURL&amp;_method=display&amp;_zone=TopNavBar&amp;_origin=article&amp;md5=98a3e89aa38c5044516e5e4ca8b64e74" rel="nofollow" target="_blank">Shopping cart</a><wbr/><a class="link-inherit" href="https://service.elsevier.com/app/contact/supporthub/sciencedirect/" rel="nofollow" target="_blank">Contact and support</a><wbr/><a class="link-inherit" href="https://www.elsevier.com/legal/elsevier-website-terms-and-conditions" rel="nofollow" target="_blank">Terms and conditions</a><wbr/><a class="link-inherit" href="http://www.elsevier.com/legal/privacy-policy" rel="nofollow" target="_blank">Privacy policy</a></div><div class="els-footer-cookie">Cookies are used by this site. For more information, visit the <a class="link-blue" href="https://www.elsevier.com/solutions/sciencedirect/support/cookies" rel="nofollow" target="_blank">cookies page</a>.</div><div class="els-footer-copyright">Copyright © <span class="copyright-year">2017</span> Elsevier B.V. or its licensors or contributors. ScienceDirect ® is a registered trademark of Elsevier B.V.</div></div></div><div class="els-footer-relx-group"><a class="els-footer-relx" href="http://www.relx.com/" rel="nofollow" target="_blank"><span class="ccs-icon svg-wordmark-relx-group" aria-label="RELX Group"><span class="svg-text">RELX Group</span></span></a></div></div></div>
+        </div>
+    
+
+
+
+<div style="clear:both;"></div>
+
+<form name="citationInfo" id ="citationInfo" method="POST" action="">
+    <input type="hidden" name="art_citation" value=""/>
+</form>
+
+
+<script src="http://cdn.els-cdn.com/sd/js/sdX_1706R1.js"></script>
+
+
+
+
+<script src="http://cdn.els-cdn.com/sd/js/sd_1706R1.js"></script>
+
+
+
+<script src="http://cdn.els-cdn.com/sd/js/pa_1706R1.js"></script>
+
+
+<script>
+var sciverse="empty";
+var SDM=new Object;
+SDM.tm=new Object;
+SDM.tm.ahm='h'
+
+
+
+SDM.ep=new Object;
+SDM.ep.downloadCsvURL = "http://services.elsevier.com/SDWebExport/export/table/csv";
+SDM.ep.downloadActionURL = "http://www.sciencedirect.com/science/downloadActions/keyEvent/S089360801730059X/08936080";
+SDM.ep.gigyaLib="//cdn.gigya.com/JS/socialize.js?apiKey=3__Bt7bHrGM8mjKPwBuOVjWyMi678aF6-PewcnoHJJ6UR1fS5t9NG9RBbKHjE0oA6J";
+SDM.ep.imgUrlPrefix = "http://ars.els-cdn.com/content/image/";
+SDM.ep.thumbimgUrlPrefix = "http://ars.els-cdn.com/content/thumbimage/";
+SDM.ep.mendeleyJS = "https://www.mendeley.com/minified/bookmarklet.js";
+SDM.ep.enableUsabillaMsg = "Y";
+SDM.ep.ref2ref2by = "http://www.sciencedirect.com/science/relLink/ajaxReq?_eid=1-s2.0-S089360801730059X";
+SDM.ep.staticImgUrlPrefix = "http://cdn.els-cdn.com/sd";
+SDM.ep.urlPrefix = "http://www.sciencedirect.com/science";
+SDM.ep.urlQualifier = "science";
+SDM.ep.urlScheme = "http://www.sciencedirect.com";
+SDM.ep.userActionURL = "http://www.sciencedirect.com/science/UserActions";
+ SDM.helpUrlDomain="http://help.sciencedirect.com/flare"; 
+
+
+
+
+SDM.pm=new Object;
+SDM.pm.cid = '271125';
+SDM.pm.contentFamily = "serial";
+SDM.pm.contentType = "JL";
+SDM.pm.coverDate = '31-Aug-2017';
+
+SDM.pm.doi = '10.1016/j.neunet.2017.02.013';
+
+SDM.doi = '10.1016/j.neunet.2017.02.013';
+SDM.pm.eid = '1-s2.0-S089360801730059X';
+SDM.pm.entitled = true;
+ SDM.pm.hubEid = '1-s2.0-S0893608017X00063'; 
+SDM.pm.indexType = '';
+SDM.pm.issnisbn = "08936080";
+ SDM.pm.isSpecialIssue=true;
+SDM.pm.itemWeight = 'FULL-TEXT';
+SDM.pm.mod_cid="";
+SDM.pm.mod_srcTitle="";
+SDM.pm.mod_ISBN = "";
+SDM.pm.pdfEid = '1-s2.0-S089360801730059X-main.pdf';
+SDM.pm.pdfSize = '1522567';
+SDM.pm.pii = 'S089360801730059X';
+SDM.pm.prodColor="sci_dir";if(SDM.pm.prodColor=="sci_dir")SDM.pm.prodColor="";
+ SDM.pm.rev = '20170607T193914780648'; 
+ SDM.pm.hrev = 'vH.13'; 
+ SDM.pm.pptURL = 'http://services.elsevier.com/SDWebExport/export/figure/'; 
+
+
+
+
+
+
+
+SDM.pf = new Object;
+SDM.pf.pdfAvail = true;
+SDM.pf.reqAllFrags = true;
+ SDM.pf.maxElemsAllFrags = 12000
+SDM.pf.relatedBkAvail=true;
+SDM.pf.mlktAvail = true;
+SDM.pf.hpccAvail = true;
+SDM.pf.blkSocialLogins=true;
+
+
+SDM.browserUserMsg=true;
+
+
+SDM.pf.citedByScAvail = true;
+SDM.pf.aetEnabled = false;
+ SDM.pf.suggestedArtPDFMaxWait="2000";
+ SDM.pf.pdfMenuAvail=true; 
+ SDM.pf.npKey="142c3bf066ad1c36dcff4fa9bb3524405609175ccce3c268e6d4e600415acc1c";
+
+
+SDM.pf.ads = new Object;
+SDM.pf.ads.leftUrl="/science/advertisement/left/num/579889/mainCat/general/cat/general/acct/2ae62d8f59fa42eafc1daee71610d08c/isn/08936080/doi/10.1016_j.neunet.2017.02.013/page/article/artOAstatus/N";
+
+
+
+
+SDM.pf.dc = new Object;
+SDM.pf.dc.retry = 10;
+SDM.pf.dc.retryDelay = 300;
+SDM.pf.dc.retryFactor = 1.0;
+SDM.pf.dc.respObj = '';
+
+
+SDM.pf.er = new Object();
+
+
+
+
+
+
+SDM.pf.frag = new Object();
+SDM.pf.frag.fat = '8f6d91b84bb395406651c54ed384f6843468cb905f0ad31adcf77eba603f72f93b681ff01644d56a1db81fd1e31d50ecb803a01ad0f5604edb701a69b922cdba44f3d19df7f2c7c1813eed19ed2399498093dd593796e211612b7629f77f6515029b2fece48b425eb2e9aa6de239da6ba10624be0c4b909b8f989beff88135e51738702f0e92dbc0aa6435362caea85b4f2f6a9b5c430c59';
+SDM.pf.frag.mapRetry = 20;
+SDM.pf.frag.mapRetryDelay = 2000;
+SDM.pf.frag.mapRetryFactor = 1.1;
+SDM.pf.frag.retry = 5;
+SDM.pf.frag.retryDelay = 2000;
+SDM.pf.frag.foldFactor = 1.5;
+SDM.pf.frag.hashWait = 5000;
+
+
+
+SDM.pf.crossMark = new Object();
+SDM.pf.crossMark.url = "http://www.sciencedirect.com/science/crossMark";
+
+SDM.pf.crossMark.lib = "http://cdn.els-cdn.com/sd/js/crossmark_1706R1.js.min";
+
+
+
+
+
+SDM.pf.gadget = new Object();
+SDM.pf.gadget.displayGadgets=true;
+SDM.pf.gadget.sciverseUrlPfx="http://www.sciencedirect.com";
+SDM.pf.gadget.sciverseJsonObject='';
+SDM.pf.gadget.sciverseGadgetDetailsID = "";
+SDM.pf.gadget.svShindigLib="http://sciverse-shindig.elsevier.com/gadgets/js/shindig-container:pubsub-2.js?c=1";
+SDM.pf.gadget.svSciverseLib="http://www.sciencedirect.com/gadgetservices/gadgets/v9/js/SciverseShindigService,GadgetToolBar,jquery-outside,jquery.ba-bbq.min,SciverseShindigContainer,ScienceDirectShindigServices.js";
+
+
+
+SDM.pf.mrwmod = new Object();
+SDM.pf.mrwmod.breadCrumbPathURL = "http://www.sciencedirect.com/science/module/breadCrumbPaths/isbn//pii/S089360801730059X";
+
+SDM.pf.mrwmod.ldrAvail = true;
+
+
+ 
+
+
+SDM.pf.oa = new Object();
+
+
+
+
+
+
+
+
+SDM.pf.ref = new Object();
+SDM.pf.ref.bs = 20;
+SDM.pf.ref.citedByURL = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_updateCitedBy=";
+SDM.pf.ref.fd = 300;
+
+SDM.pf.ref.resolveURL = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_pii=S089360801730059X&_refCnt=49&_docType=article";
+
+
+
+
+
+SDM.pf.toc=new Object;
+SDM.pf.toc.retry = 20;
+SDM.pf.toc.retryDelay = 1000;
+SDM.pf.toc.retryFactor = 1.09;
+SDM.pf.toc.outlineGraphics = false;
+SDM.pf.toc.outlineTab = "";
+
+SDM.pf.toc.urlTOCLink="http://www.sciencedirect.com/science/article/pii/S089360801730059X";
+SDM.pf.toc.urlTOCLinkQueryStr="?_rdoc=1&_fmt=full&_origin=&md5=22543fb95e34d36391c44b9d9cd72533";
+
+SDM.pf.ddm = new Object();
+SDM.pf.ddm.endpoint = "http://services.elsevier.com/SDWebExport/export/pdfdownload/pdf";
+
+
+
+
+
+
+SDM.si = new Object();
+SDM.si.webUserId = "7654713";
+SDM.si.sds = "e1dee3390834b65da29ef6fca93f6456d32599a1c599931470b93578034eb7a7d5cbd319448bbd821e32f8e5fb5c109e";
+SDM.si.euidCookieObject='d39c7b85fde2ec14ff836d392b30f94e13e5cbddbbf0b235c515cf1d7f8f2a311f733bec198da434';
+
+SDM.pageTransKey = "06/12/2017 22:30:18 EDT#1847_005#82638#114.255.40.25";
+SDM.pageType = "article_full";
+SDM.tid = "3dfe2a12-4fe0-11e7-adeb-00000aab0f26";
+SDM.ud = "7654713|<SAInfo><SAId>993</SAId><SAName>Calis SDOL China Consortium (CFC)</SAName><SANum>S000000993</SANum></SAInfo>|C000072452|111671|IPRANGE";
+SDM.ieVersion="8";
+
+SDM.dac = new Object;
+SDM.svapi = SVApi;
+
+</script>
+
+
+<script src="http://cdn.els-cdn.com/sd/js/importer-api_1706R1.js.min"></script>
+
+
+<script>
+
+initializeArticlePage();
+</script>
+
+
+
+
+<script type="text/javascript">/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/14bb862cc5c4.js");
+/*]]>{/literal}*/
+if(typeof SDM != "undefined") {
+  if(SDM.ud) { usabilla_live("data", {"custom": {"ud":SDM.ud} }); }
+  if(SDM.pf&&SDM.pf.oa) {
+    if(SDM.pf.oa.item) { usabilla_live("data", {"custom": {"open_access":SDM.pf.oa.item} });}
+    if(SDM.pf.oa.archive) { usabilla_live("data", {"custom": {"open_archive":SDM.pf.oa.archive} });}
+  }
+  if(SDM.pm&&SDM.pm.mod_cid) {
+    usabilla_live("data", {"custom": {"refmod_article":true} });
+  }
+  else {usabilla_live("data", {"custom": {"refmod_article":false} });}
+}
+</script>
+<script>
+function tmp_removeCite() {
+    if ($('#cited_by_articles').length) {
+    if (SDM.pm != undefined) {
+        if (SDM.pm.issnisbn == '23528478') {
+            $('#cited_by_articles').hide();
+            } 
+        } 
+    }
+}
+
+function tmp_removeCiteCounter(c) {
+    if ($('#cited_by_articles').length) {
+        tmp_removeCite();
+    }
+    else if (c>30) {
+        return;
+    }
+    else {
+        c++;
+        setTimeout(function() {tmp_removeCiteCounter(c);}, 200);
+    }
+}
+tmp_removeCiteCounter(1);  
+</script>
+
+
+<div id="sdpa"></div>
+<script>SDPA.init();</script>
+<div id="appBackground"></div>
+<div id="appDialog" class="files">
+    <div id="header">
+     <div class="pdfSearchHeading"> Download PDFs
+    <span class="close" id="closeBtn" href = "#" title = "Close Search Results " alt="Close Search Results"><img src="http://cdn.els-cdn.com/sd/sci_dir/closeButton.png"></span>
+    </div></div>
+    <div id="contentBlk" class="view">
+        <div class="help_button" id="ddmMainHelp"><a class="ddmHelp" target="sdhelp" href="/science?_ob=HelpURL&_file=DM_main.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=DM_main.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a></div>
+        <div class="help_button" id="ddmNewformatHelp"><a class="ddmHelp" target="sdhelp" href="/science?_ob=HelpURL&_file=DM_newformat.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=DM_newformat.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a></div>
+        <div id="filesTemplate"></div>
+        <div id="namingTemplate"></div> 
+    </div>
+    <div class="footer"></div>
+</div>
+
+
+
+
+
+<script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-b7cfe8df39a4e5eec5536bba80e13f4b6fa0dd7c.js"></script>
+<script>
+
+
+var pageData=new Object;
+
+var page=new Object;
+page["businessUnit"]="ELS:RP:ST";
+page["isProduction"]="true";
+page["language"]="en";
+page["name"]="product:journal:article";
+page["productName"]="SD";
+page["environment"]="prod";
+page["noTracking"]="false";
+page["loadTime"]="";
+page["loadTimestamp"]=Date.now().toString();
+page["type"]="CP-CA";
+pageData["page"]=page;
+
+var visitor=new Object;
+visitor["accessType"]="ae:ANON-IP";
+visitor["accountId"]="ae:72452";
+visitor["accountName"]="ae:Beijing University of Posts & Telecommunications";
+
+  visitor["consortiumId"]="ae:S000000993";
+
+visitor["industry"]="";
+visitor["ipAddress"]="114.255.40.25";
+visitor["loginStatus"]="";
+visitor["sisId"]="";
+
+visitor["userId"]="ae:7654713";
+pageData["visitor"]=visitor;
+
+
+var pageContent=new Object;
+pageContent["entitlementType"]="subscribed";
+pageContent["format"]="MIME-XHTML";
+pageContent["id"]="sd:article:pii:S089360801730059X";
+pageContent["type"]="SD:ARTICLE:SCOPE-FULL";
+pageContent["detail"]="SD:ARTICLE:subtype:fla";
+pageData["content"]=[pageContent];
+
+
+function getPageLoadTime()
+{ 
+    returnValue = '';
+    if (typeof(performance) !== 'undefined' && typeof(performance.timing) == 'object')
+    {
+        timing = performance.timing;
+        startTime = timing.redirectStart || timing.fetchStart || timing.requestStart;
+        endTime = timing.domContentLoadedEventEnd || timing.domInteractive || timing.domComplete || timing.loadEventComplete;
+        if (startTime && endTime && startTime < endTime) returnValue = endTime - startTime;
+    }
+    return returnValue.toString();
+}
+
+$(document).ready(function()
+{
+    if( typeof(pageData) != 'undefined' && typeof(pageData["page"]) != 'undefined' && typeof(pageData["page"]["loadTime"]) != 'undefined' )
+    {
+        pageData["page"]["loadTime"]=getPageLoadTime();
+    }
+}
+);
+
+
+try { pageDataTracker.trackPageLoad(); }
+catch(e) { console.warn("There was an error loading or running Adobe DTM:\r\n ", e); }
+</script>
+
+
+
+<script src="//sdfestaticassets-us-east-1.sciencedirectassets.com/prod/26bda2a14cd988af06abf5ea187fed2fe3377b7e/client.js"></script>
+
+
+</body></html>
+
